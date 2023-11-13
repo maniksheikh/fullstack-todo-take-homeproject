@@ -9,7 +9,7 @@
   
   <style>
   * {
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
   }
   .bg-main {
     background: linear-gradient(

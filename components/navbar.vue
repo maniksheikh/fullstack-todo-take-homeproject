@@ -5,7 +5,7 @@
     >
       <div
         class="flex justify-between text-center items-center w-[800px] m-auto">
-        <NuxtLink to="/todos" class="text-xl font-bold text-white-500">Todo-App</NuxtLink>
+        <NuxtLink to="/" class="text-xl font-bold text-white-500">Todo-App</NuxtLink>
        <NuxtLink
           class="bg-[#55dda9] text-[#4d4c4c] px-4 py-1 text-base font-bold rounded-md"
           to="/signin" >
@@ -81,7 +81,7 @@ const logout = () => {
   signOut(auth)
     .then(() => {
       store.setUser(null);
-      alert("logout");
+      alert("logout page");
     })
     .catch((e) => {
       console.error(e);
