@@ -143,6 +143,7 @@ export const useTodoStore = defineStore("todo", () => {
       );
 
       todos.value = todos.value.filter((todo) => todo.id !== postId);
+      alert('Are you sure Delete this.?')
     } catch (error) {
       console.error("Error deleting the todo:", error);
     }
