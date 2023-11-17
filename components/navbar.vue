@@ -21,7 +21,6 @@
             </h3>
           </div>
           <NuxtLink
-            to="/profile"
             class="flex items-center gap-2 w-full px-3 py-1.5 hover:bg-[#DAECEF]"
           >
             <div
