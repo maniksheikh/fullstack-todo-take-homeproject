@@ -1,58 +1,86 @@
 <template>
-  <div class="bg-[#e7ddff] h-[100vh]">
-    <div class="bg-[#000] text-white mx-auto text-center justify-center mt-24 items-center w-[480px] overflow-hidden p-10 font-medium rounded-lg border border-l-white">
-    <h1 class="font-bold py-5">Sign In</h1>
-    <div>
-      <div class="flex justify-center gap-4 py-12 border border-gray-100">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="18"
-        height="18"
-        viewBox="0 0 256 262"
+  <div
+    class="flex justify-center items-center min-h-[calc(100vh-70px)] overflow-hidden p-10"
+  >
+    <div
+      class="mx-auto max-w-[375px-667px] min-h-[468px] shadow-lg bg-[#000] text-white rounded-[12px] p-9 gap-[56px]"
+    >
+      <div class="flex justify-center items-center text-lg font-bold mt-8 p-2 gap-[8px]">
+        Todo App
+      </div>
+      <div class="text-center mt-4 text-[14px] font-[400] leading[22px]">
+        <h3>Welcome to Todo</h3>
+      </div>
+
+      <button
+        class="mx-auto w-[308px] h-[44px] flex justify-center items-center mt-12 border-solid border-[1px] cursor-pointer border-[#A37CFF] rounded-md"
+        @click="signInWithGoogle"
       >
-        <path
-          fill="#4285F4"
-          d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622l38.755 30.023l2.685.268c24.659-22.774 38.875-56.282 38.875-96.027"
-        />
-        <path
-          fill="#34A853"
-          d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055c-34.523 0-63.824-22.773-74.269-54.25l-1.531.13l-40.298 31.187l-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1"
-        />
-        <path
-          fill="#FBBC05"
-          d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82c0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782"
-        />
-        <path
-          fill="#EB4335"
-          d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0C79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251"
-        />
-      </svg>
-      <button @click.stop="signInWithGoogle">Sign in With Google</button>
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 25 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clip-path="url(#clip0_264_11372)">
+            <path
+              d="M24.4888 12.2242C24.4888 11.2409 24.4071 10.5234 24.2304 9.7793H12.7393V14.2173H19.4843C19.3484 15.3202 18.614 16.9811 16.9821 18.0972L16.9592 18.2458L20.5925 20.996L20.8442 21.0205C23.156 18.9344 24.4888 15.8649 24.4888 12.2242Z"
+              fill="#4285F4"
+            />
+            <path
+              d="M12.7393 23.9178C16.0438 23.9178 18.8179 22.8548 20.8442 21.0211L16.9821 18.0978C15.9486 18.8021 14.5615 19.2937 12.7393 19.2937C9.50273 19.2937 6.75576 17.2076 5.77654 14.3242L5.63301 14.3361L1.85507 17.193L1.80566 17.3271C3.81829 21.2337 7.95238 23.9178 12.7393 23.9178Z"
+              fill="#34A853"
+            />
+            <path
+              d="M5.77634 14.3248C5.51797 13.5807 5.36844 12.7834 5.36844 11.9596C5.36844 11.1357 5.51797 10.3385 5.76275 9.59439L5.75591 9.43592L1.93062 6.5332L1.80547 6.59137C0.975969 8.21247 0.5 10.0329 0.5 11.9596C0.5 13.8863 0.975969 15.7066 1.80547 17.3277L5.77634 14.3248Z"
+              fill="#FBBC05"
+            />
+            <path
+              d="M12.7393 4.62403C15.0374 4.62403 16.5877 5.59402 17.4717 6.40461L20.9258 3.10928C18.8044 1.1826 16.0438 0 12.7393 0C7.95238 0 3.81829 2.68406 1.80566 6.59056L5.76295 9.59359C6.75576 6.7102 9.50273 4.62403 12.7393 4.62403Z"
+              fill="#EB4335"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_264_11372">
+              <rect
+                width="24"
+                height="24"
+                fill="white"
+                transform="translate(0.5)"
+              />
+            </clipPath>
+          </defs>
+        </svg>
+        <p class="ml-2 text-[16px] font-[500] leading[24px] gap-[14px]">
+          Sign in with Google
+        </p>
+      </button>
+      <div
+        class="text-center w-[388px] mt-14 text-[14px] font-[500] leading[22px] px-[40px]"
+      >
+        This site is protected by reCAPTCHA and the Google Privacy Policy and
+        Terms of Service apply
+      </div>
     </div>
-    </div>
-  
-    <p class=" flex text-center p-5 mt-6">This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply</p>
   </div>
-  </div>
- 
 </template>
 
 <script setup>
 import { signInWithPopup, GoogleAuthProvider, getAuth } from "firebase/auth";
-
+const route = useRoute();
 const signInWithGoogle = async () => {
   const auth = getAuth();
   const provider = new GoogleAuthProvider();
   try {
     await signInWithPopup(auth, provider);
-    console.log("Successfully signed in with Google");
-    navigateTo('/')
-    
+    if (auth.currentUser.email) {
+      navigateTo("/");
+    }
   } catch (error) {
     console.error("Error signing in with Google:", error);
   }
+  return { signInWithGoogle };
 };
 </script>
-  
-  <style></style>
   
